@@ -1,7 +1,8 @@
 var figlet = require('figlet');
 import {RpsContext,RpsModule,rpsAction} from 'rpscript-interface';
 
-/** Welcome to Basic Module
+/** Generate Text Banner with Figlet.
+ * @see {@link https://www.npmjs.com/package/figlet|Figlet}
  * @namespace Figlet
 */
 @RpsModule("figlet")
@@ -11,13 +12,13 @@ export default class RPSFiglet {
  * @function figlet
  * @memberof Figlet
  * @example
- *
+ * ; Display fanciful ascii art
  * figlet 'Boo!' --font="Ghost"
  * 
- * @param {string} text data to be printed out.
- * @returns {string} the formatted display.
+ * @param {string} text Text to be converted to ascii art.
+ * @param {*} options List of options for Figlet.
+ * @returns {string} Ascii art format.
  * @summary Display Ascii Art
- * @description Figlet. Ascii Art
  * 
  * @see {@link https://www.npmjs.com/package/figlet}
  * 
