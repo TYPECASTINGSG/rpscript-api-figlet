@@ -18,14 +18,17 @@ export default class RPSFiglet {
  * @param {string} text Text to be converted to ascii art.
  * @param {*} options List of options for Figlet.
  * @returns {string} Ascii art format.
- * @summary Display Ascii Art
+ * @summary figlet :: String → String
  * 
  * @see {@link https://www.npmjs.com/package/figlet}
  * 
 */
   @rpsAction({verbName:'figlet'})
-  async figlet (ctx:RpsContext,opts:Object, text:string) : Promise<string>{
-    return figlet.textSync(text,opts);
+  async figlet (ctx:RpsContext,opts:Object, text?:string) : Promise<string|Function>{
+    if(text)
+      return figlet.textSync(text,opts);
+    else
+      return function(text){return figlet.textSync(text,opts);}
   }
 
 }

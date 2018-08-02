@@ -13,6 +13,10 @@ m.describe('Figlet', () => {
 
     console.log(output);
 
+    let fn:any = await md.figlet(new RpsContext,{font:'Ghost'});
+
+    console.log(fn("Spooky"));
+
   }).timeout(0);
 
 })
