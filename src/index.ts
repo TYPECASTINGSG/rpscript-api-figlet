@@ -13,11 +13,10 @@ export default class RPSFiglet {
  * @memberof Figlet
  * @example
  * ; Display fanciful ascii art
- * figlet 'Boo!' --font="Ghost"
+ * figlet --font="Ghost" 'Boo!'
  * 
  * @param {string} text Text to be converted to ascii art.
- * @param {*} options List of options for Figlet.
- * @returns {string} Ascii art format.
+ * @param {*} options refer to figlet documentation.
  * @summary figlet :: String → String
  * 
  * @see {@link https://www.npmjs.com/package/figlet}
