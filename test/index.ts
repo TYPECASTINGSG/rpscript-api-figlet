@@ -9,13 +9,14 @@ m.describe('Figlet', () => {
   m.it('should print pretty text', async function () {
     let md = new RPSFiglet;
 
-    let output = await md.figlet(new RpsContext,{font:'Ghost'},"Hello World");
-
+    let output = await md.figlet(new RpsContext,{},"Ghost","Hello World");
     console.log(output);
 
-    let fn:any = await md.figlet(new RpsContext,{font:'Ghost'});
+    let fn:any = await md.figlet(new RpsContext,{});
+    console.log(fn("The Edge","Spooky"));
 
-    console.log(fn("Spooky"));
+    let fn2:any = await md.figlet(new RpsContext,{},"Cosmike");
+    console.log(fn2("Cosmike Here"));
 
   }).timeout(0);
 
