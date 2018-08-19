@@ -2,8 +2,11 @@ var figlet = require('figlet');
 import {RpsContext,RpsModule,rpsAction,R} from 'rpscript-interface';
 
 /** Generate Text Banner with Figlet.
- * @see {@link https://www.npmjs.com/package/figlet|Figlet}
+ * @see {@link https://www.npmjs.com/package/figlet}
  * @namespace Figlet
+ * 
+ * @example
+ * rps install figlet
 */
 @RpsModule("figlet")
 export default class RPSFiglet {
